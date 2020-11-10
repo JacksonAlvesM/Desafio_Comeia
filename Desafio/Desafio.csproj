@@ -133,6 +133,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011101433529_InitialCreate.cs" />
+    <Compile Include="Migrations\202011101433529_InitialCreate.Designer.cs">
+      <DependentUpon>202011101433529_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011102047411_InitialCreate1.cs" />
+    <Compile Include="Migrations\202011102047411_InitialCreate1.Designer.cs">
+      <DependentUpon>202011102047411_InitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Api.cs" />
     <Compile Include="Models\Empresas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -192,6 +201,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011101433529_InitialCreate.resx">
+      <DependentUpon>202011101433529_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011102047411_InitialCreate1.resx">
+      <DependentUpon>202011102047411_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
