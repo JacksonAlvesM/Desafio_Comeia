@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Desafio.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using static Desafio.Models.Api;
 
 namespace Desafio.Controllers
 {
@@ -15,9 +19,12 @@ namespace Desafio.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var url = "https://www.receitaws.com.br/v1/cnpj/27865757000102";
+            WebClient wc = new WebClient();
+            var dados = wc.DownloadString(url);
+            var rs = JsonConvert.DeserializeObject<Root>(dados);
 
-            return View();
+            return View(rs);
         }
 
         public ActionResult Contact()

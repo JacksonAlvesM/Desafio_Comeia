@@ -1,7 +1,25 @@
 ﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+    ViewBag.Title = "Resultados da Api";
 
-<p>Use this area to provide additional information.</p>
+    <table class="table">
+        <tr>
+            <td><b>Nome</b></td>
+            <td><b>Email</b></td>
+            <td><b>Cnpj</b></td>
+            <td><b>Data_Situação</b></td>
+            <td><b>numero</b></td>
+        </tr>
+
+
+        <tr>
+            <td>@Model.nome</td>
+            <tb>@Model.email</tb>
+            <td>@Model.cnpj</td>
+            <td>@Model.data_situacao</td>
+            <td>@Model.numero</td>
+
+
+        </tr>
+
+    </table>
+}
